@@ -1,0 +1,52 @@
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+getgenv().SecureMode = true
+
+local Window = Rayfield:CreateWindow({
+   Name = "Rapaz Hub | opl",
+   LoadingTitle = "rapaz hub",
+   LoadingSubtitle = "by rapaz",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "rapaz Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   }
+})
+
+
+
+local Tab = Window:CreateTab("Auto Farm")
+
+local Button = Tab:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+   -- codigo
+   end,
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Toggle Example",
+   CurrentValue = false,
+   Flag = "Toggle1",
+   Callback = function(Value)
+   loop = Value
+            while loop do task.wait(1)
+local args = {
+    [1] = 763514.86,
+    [2] = "BombPower5",
+    [3] = "StopCharging",
+    [4] = CFrame.new(-978.730835, 215, 1664.86951, 0.324074566, 0.47920081, -0.815685213, -0, 0.862217784, 0.506537855, 0.94603157, -0.164156035, 0.279422849),
+    [5] = workspace:WaitForChild("IslandCaver"):WaitForChild("Stones"):WaitForChild("Stone"),
+    [6] = 100
+}
+
+game:GetService("Players").LocalPlayer.Character.Powers.Bomb.RemoteEvent:FireServer(unpack(args))
+
+
+   end
+   end,
+})
